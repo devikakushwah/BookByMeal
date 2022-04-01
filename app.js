@@ -24,6 +24,7 @@ app.use('/admin/profile',aProfileRouter);
 app.use('/customer/profile',cProfileRouter);
 app.use('/customer',customerRouter);
 app.use('/admin',adminRouter);
-app.listen(3000,(request,response)=>{
+const port = process.env.PORT || 8080
+app.listen(port,(request,response)=>{
     console.log('server running');
 });
